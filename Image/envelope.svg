@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 32 32">
+  <!-- Generator: Adobe Illustrator 30.1.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 136)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #f5f0ec;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M28,6H4c-.55,0-1,.45-1,1v17c0,1.1.9,2,2,2h22c1.1,0,2-.9,2-2V7c0-.55-.45-1-1-1ZM16,16.64L6.57,8h18.86l-9.43,8.64ZM12.34,16l-7.34,6.73v-13.45l7.34,6.73ZM13.82,17.36l1.5,1.38c.38.35.97.35,1.35,0l1.5-1.38,7.25,6.64H6.57l7.25-6.64ZM19.66,16l7.34-6.73v13.46l-7.34-6.73Z"/>
+</svg>

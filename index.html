@@ -1,27 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AuditCom - Le football suisse romand passé au scan</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="src/main.js" type="module" defer></script>
-
 </head>
+
 <body>
+    <!-- En-tête avec titre principal -->
+    <header>
+        <h1>LE FOOTBALL SUISSE ROMAND PASSÉ AU SCAN</h1>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Hero (intro + CTA) -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-subtitle">Une analyse comparative fiable des équipes, basée sur des données réelles.</p>
+                <img src="img/terrain-football.svg" alt="Schéma d'un terrain de football">
+                <a href="#downloadForm" class="cta-button">VERS LE FORMULAIRE</a>
+            </div>
+        </section>
+
+        <!-- Section Chiffres clés -->
+        <section class="stats-grid">
+            <article class="stat-card">
+                <p class="stat-number">34s</p>
+                <p class="stat-label">temps de chargement mobile</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-number">90%</p>
+                <p class="stat-label">Des visiteurs abandonnent</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-number">+394%</p>
+                <p class="stat-label">Croissance d'audience</p>
+            </article>
+            <article class="stat-card">
+                <p class="stat-number" data-bind-global="count"></p>
+                <p class="stat-label">Analysés et comparés</p>
+            </article>
+        </section>
+
+        <!-- Section Liste des clubs (HORS de stats-grid) -->
+        <section class="team-section">
+            <h2 class="visually-hidden">Liste des clubs analysés</h2>
+            <div id="teamList"></div>
+        </section>
+
+        <!-- Section explicative -->
+        <section class="insights">
+            <div class="insights-icon">
+                <img src="" alt="">
+            </div>
+            <div class="insights-content">
+                <h2>CE QUE RÉVÈLENT LES DONNÉES</h2>
+                <p>Les clubs qui structurent leur écosystème digital dépassent largement ceux qui improvisent, même à
+                    niveau sportif égal</p>
+                <h3>DE L'AMATEURISME AU STANDARD PROFESSIONNEL : LE GUIDE POUR STRUCTURER LA CROISSANCE DE VOTRE ÉQUIPE.
+                </h3>
+            </div>
+        </section>
+
+        <!-- Section Formulaire -->
+        <section class="form-section">
+            <form id="downloadForm">
+                <label for="lastName">Nom</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="firstName">Prénom</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement">
+                    <label for="newsletterAgreement">J'accepte de recevoir la newsletter</label>
+                </div>
+
+                <button type="submit">Télécharger le rapport</button>
+            </form>
+
+            <!-- Conteneur pour les messages -->
+            <div id="messageContainer"></div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 AuditCom - Tous droits réservés</p>
+    </footer>
+
+
+
+
+
     <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <h1 data-bind-global="count"></h1>
-    
+    <!-- <h1 data-bind-global="count"></h1> -->
+
     <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <section id="teamList">
-    </section>
+    <!-- <section id="teamList">
+    </section> -->
 
     <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-    <div id="messageContainer"></div>
+    <!-- <div id="messageContainer"></div> -->
 
     <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-    <form id="downloadForm">
-    </form>
+    <!-- <form id="downloadForm">
+    </form> -->
 
 </body>
+
 </html>
