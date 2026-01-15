@@ -12,7 +12,6 @@
     <!-- En-tête avec titre principal -->
     <header>
         <div class="header-container">
-            <!-- <p class="header-label">AuditCom</p> -->
             <h1>LE FOOTBALL SUISSE ROMAND PASSÉ AU SCAN</h1>
         </div>
     </header>
@@ -22,18 +21,17 @@
         <!-- Section Hero (intro + CTA) -->
         <section class="hero">
             <div class="hero-left">
-                <div class="hero-text-card">
-                    <p class="hero-subtitle">Une analyse comparative fiable des équipes, basée sur des données réelles.
-                    </p>
-                </div>
-                <div class="hero-image-card">
+                <article class="hero-text-card">
+                    <p class="hero-subtitle">Une analyse comparative fiable des équipes, basée sur des données réelles.</p>
+                </article>
+                <figure class="hero-image-card">
                     <img src="/Image/TerrainSVG.svg" alt="Schéma d'un terrain de football">
-                </div>
+                </figure>
             </div>
 
             <a href="#downloadForm" class="hero-cta">
                 <span class="hero-cta-text">VERS LE FORMULAIRE</span>
-                <img src="/Image/download-simple.svg" alt="" class="hero-cta-icon">
+                <img src="/Image/caret-down.svg" alt="Flèche vers le bas" class="hero-cta-icon">
             </a>
         </section>
 
@@ -63,45 +61,50 @@
             </div>
 
             <!-- Colonne droite : Liste des clubs -->
-            <div class="right-column">
+            <aside class="right-column">
                 <div class="team-container">
                     <h2>28 CLUBS</h2>
                     <p class="team-subtitle">Analysé et comparé</p>
                     <div id="teamList"></div>
                 </div>
-            </div>
+            </aside>
 
         </section>
+
         <!-- Section explicative -->
         <section class="insights">
-            <div class="insights-icon">
-                <img src="/Image/soccer-ball.svg" alt="Image d'un ballon de foot">
-            </div>
+            <figure class="insights-icon">
+                <img src="/Image/soccer-ball.svg" alt="">
+            </figure>
             <div class="insights-content">
                 <h2>CE QUE RÉVÈLENT LES DONNÉES</h2>
-                <p>Les clubs qui structurent leur écosystème digital dépassent largement ceux qui improvisent, même à
-                    niveau sportif égal</p>
-                <h3>DE L'AMATEURISME AU STANDARD PROFESSIONNEL : LE GUIDE POUR STRUCTURER LA CROISSANCE DE VOTRE ÉQUIPE.
-                </h3>
+                <p>Les clubs qui structurent leur écosystème digital dépassent largement ceux qui improvisent, même à niveau sportif égal</p>
+                <h3>DE L'AMATEURISME AU STANDARD PROFESSIONNEL : LE GUIDE POUR STRUCTURER LA CROISSANCE DE VOTRE ÉQUIPE.</h3>
             </div>
         </section>
 
         <!-- Section Formulaire -->
         <section class="form-section">
             <form id="downloadForm">
-                <label for="lastName">Nom</label>
-                <input type="text" id="lastName" name="lastName" required>
+                <div class="form-group">
+                    <label for="lastName">Nom</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
 
-                <label for="firstName">Prénom</label>
-                <input type="text" id="firstName" name="firstName" required>
+                <div class="form-group">
+                    <label for="firstName">Prénom</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                <div class="checkbox-group">
+                <fieldset class="form-group checkbox-group">
                     <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement">
                     <label for="newsletterAgreement">J'accepte de recevoir la newsletter</label>
-                </div>
+                </fieldset>
 
                 <button type="submit">Télécharger le rapport</button>
             </form>
@@ -113,39 +116,12 @@
 
     <!-- Pied de page -->
     <footer>
-        <p>© 2026 AuditCom - Tous droits réservés</p>
-    </footer>
+        <p>&copy; 2026 AuditCom - Tous droits réservés</p>
     </footer>
 
-    <!-- Scripts JavaScript (NE PAS MODIFIER) -->
+    <!-- Scripts JavaScript -->
     <script type="module" src="src/main.js"></script>
 
 </body>
 
-
 </html>
-
-
-
-
-<!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-<!-- <h1 data-bind-global="count"></h1> -->
-<!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-<!-- <h1 data-bind-global="count"></h1> -->
-
-<!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-<!-- <section id="teamList">
-<!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-<!-- <section id="teamList">
-    </section> -->
-
-<!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-<!-- <div id="messageContainer"></div> -->
-<!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-<!-- <div id="messageContainer"></div> -->
-
-<!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-<!-- <form id="downloadForm">
-<!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-<!-- <form id="downloadForm">
-    </form> -->
