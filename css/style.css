@@ -70,19 +70,55 @@ h3 {
    HEADER
 ======================================== */
 
+
 header {
-  background-color: var(--color-primary);
+  background-color: var(--color-gray-light);
   padding: var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 160vh;
 }
+
+.header-container {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+}
+
+/* .header-label {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+} */
 
 header h1 {
   font-size: var(--font-size-h1);
   text-transform: uppercase;
   letter-spacing: -0.02em;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: left;
-  padding-bottom: 40vh;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--color-dark);
+}
+
+/* Responsive Header */
+@media (min-width: 768px) {
+  header {
+    min-height: 70vh;
+  }
+  
+  .header-container {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+  
+  header h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
 }
 
 /* ========================================
