@@ -70,48 +70,66 @@
             </aside>
 
         </section>
+       <!-- Section explicative -->
+<section class="insights">
+    <!-- Box noire avec ballon jaune -->
+    <div class="insights-icon-box">
+        <img src="/Image/soccer-ball.svg" alt="Image d'un ballon de foot">
+    </div>
+    
+    <!-- Box blanche avec texte -->
+    <div class="insights-text-box">
+        <h2>CE QUE RÉVÈLENT LES DONNÉES</h2>
+        <p>Les clubs qui structurent leur écosystème digital dépassent largement ceux qui improvisent, même à
+            niveau sportif égal</p>
+    </div>
+</section>
 
-        <!-- Section explicative -->
-        <section class="insights">
-            <figure class="insights-icon">
-                <img src="/Image/soccer-ball.svg" alt="">
-            </figure>
-            <div class="insights-content">
-                <h2>CE QUE RÉVÈLENT LES DONNÉES</h2>
-                <p>Les clubs qui structurent leur écosystème digital dépassent largement ceux qui improvisent, même à niveau sportif égal</p>
-                <h3>DE L'AMATEURISME AU STANDARD PROFESSIONNEL : LE GUIDE POUR STRUCTURER LA CROISSANCE DE VOTRE ÉQUIPE.</h3>
-            </div>
-        </section>
 
-        <!-- Section Formulaire -->
-        <section class="form-section">
-            <form id="downloadForm">
+
+       <!-- Section Formulaire -->
+<section class="form-section">
+    <div class="form-container">
+        <!-- Titre à gauche -->
+        <div class="form-header">
+            <h2>Recevez le rapport d’analyse détaillé</h2>
+        </div>
+        
+        <!-- Formulaire à droite (reste identique) -->
+        <form id="downloadForm">
+            <div class="form-grid">
                 <div class="form-group">
-                    <label for="lastName">Nom</label>
-                    <input type="text" id="lastName" name="lastName" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Nom" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="firstName">Prénom</label>
-                    <input type="text" id="firstName" name="firstName" required>
+                    <input type="text" id="firstName" name="firstName" placeholder="Prénom" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="form-group form-group-full">
+                    <input type="email" id="email" name="email" placeholder="Email" required>
                 </div>
 
                 <fieldset class="form-group checkbox-group">
                     <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement">
                     <label for="newsletterAgreement">J'accepte de recevoir la newsletter</label>
-                </fieldset>
+                </div>
+            </div>
 
-                <button type="submit">Télécharger le rapport</button>
-            </form>
+            <button type="submit" class="submit-button">
+                <span>Télécharger le rapport</span>
+                <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+            </button>
+        </form>
+    </div>
 
-            <!-- Conteneur pour les messages -->
-            <div id="messageContainer"></div>
-        </section>
+    <!-- Conteneur pour les messages -->
+    <div id="messageContainer"></div>
+</section>
     </main>
 
     <!-- Pied de page -->
