@@ -335,8 +335,35 @@ header h1 {
 
 .stat-purple {
   background-color: rgba(184, 167, 232, 0.5);
-  border: 2px solid rgb(184, 167, 232);
-  color: var(--color-dark);
+  border: 2px solid rgb(177, 130, 240);
+  color: var(--color-purple-pale);
+  position: relative; /* Important pour positionner l'image */
+  overflow: hidden; /* Pour que l'image ne dépasse pas */
+}
+
+/* Image de fond dans la box violette */
+.stat-purple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-image: url('/Image/trend-up.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; /* Transparence de l'image */
+  z-index: 0;
+  pointer-events: none; /* Pour que l'image n'interfère pas avec les clics */
+}
+
+/* S'assurer que le contenu reste au-dessus de l'image */
+.stat-purple .stat-number,
+.stat-purple .stat-label {
+  position: relative;
+  z-index: 1;
 }
 
 .stat-large {
