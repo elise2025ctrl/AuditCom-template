@@ -216,12 +216,25 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  height: 100%;
 }
 
+/* Première ligne : 2 cartes côte à côte */
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  flex: 1; /* Prend tout l'espace disponible */
+}
+
+/* Cartes de statistiques */
 .stat-card {
   padding: var(--spacing-lg) var(--spacing-md);
   border-radius: var(--radius-md);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stat-dark {
@@ -230,14 +243,31 @@ header h1 {
 }
 
 .stat-purple {
-  background-color: #B8A7E8;
+  background-color: rgba(184, 167, 232, 0.5); /* 50% transparent */
+  border: 2px solid rgb(184, 167, 232); /* Bordure non transparente */
   color: var(--color-dark);
+}
+
+.stat-large {
+  padding: var(--spacing-xl) var(--spacing-md);
 }
 
 .stat-number {
   font-size: var(--font-size-stat);
   font-weight: 700;
   margin-bottom: var(--spacing-xs);
+}
+
+/* Unité "S" en petit et jaune */
+.stat-number .unit {
+  font-size: var(--font-size-h3);
+  font-weight: 400;
+  color: var(--color-primary); /* Jaune */
+}
+
+/* Symbole "%" en jaune */
+.stat-number .percent-yellow {
+  color: var(--color-primary); /* Jaune */
 }
 
 .stat-label {
@@ -249,6 +279,7 @@ header h1 {
 .right-column {
   position: sticky;
   top: 20px;
+  height: fit-content;
 }
 
 .team-container {
@@ -347,6 +378,10 @@ header h1 {
 /* Responsive : Passe en 1 colonne sur mobile */
 @media (max-width: 768px) {
   .two-column-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-row {
     grid-template-columns: 1fr;
   }
   
