@@ -252,6 +252,7 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  height: 100%;
 }
 
 /* Première ligne : 2 cartes côte à côte */
@@ -259,6 +260,7 @@ header h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-md);
+  flex: 1; /* Prend tout l'espace disponible */
 }
 
 /* Cartes de statistiques */
@@ -266,6 +268,9 @@ header h1 {
   padding: var(--spacing-lg) var(--spacing-md);
   border-radius: var(--radius-md);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stat-dark {
@@ -289,10 +294,11 @@ header h1 {
   margin-bottom: var(--spacing-xs);
 }
 
-/* Unité "s" en petit */
+/* Unité "S" en petit et jaune */
 .stat-number .unit {
   font-size: var(--font-size-h3);
   font-weight: 400;
+  color: var(--color-primary); /* Jaune */
 }
 
 /* Symbole "%" en jaune */
@@ -309,6 +315,7 @@ header h1 {
 .right-column {
   position: sticky;
   top: 20px;
+  height: fit-content;
 }
 
 .team-container {
