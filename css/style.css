@@ -68,19 +68,55 @@ h1, h2, h3 {
    HEADER
 ======================================== */
 
+
 header {
-  background-color: var(--color-primary);
+  background-color: var(--color-gray-light);
   padding: var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 160vh;
 }
+
+.header-container {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+}
+
+/* .header-label {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+} */
 
 header h1 {
   font-size: var(--font-size-h1);
   text-transform: uppercase;
   letter-spacing: -0.02em;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: left;
-  padding-bottom: 40vh;
+  margin: 0;
+  line-height: 1.1;
+  color: var(--color-dark);
+}
+
+/* Responsive Header */
+@media (min-width: 768px) {
+  header {
+    min-height: 70vh;
+  }
+  
+  .header-container {
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+  
+  header h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+  }
 }
 
 /* ========================================
@@ -216,7 +252,6 @@ header h1 {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  height: 100%;
 }
 
 /* Première ligne : 2 cartes côte à côte */
@@ -224,7 +259,6 @@ header h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-md);
-  flex: 1; /* Prend tout l'espace disponible */
 }
 
 /* Cartes de statistiques */
@@ -232,9 +266,6 @@ header h1 {
   padding: var(--spacing-lg) var(--spacing-md);
   border-radius: var(--radius-md);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .stat-dark {
@@ -258,11 +289,10 @@ header h1 {
   margin-bottom: var(--spacing-xs);
 }
 
-/* Unité "S" en petit et jaune */
+/* Unité "s" en petit */
 .stat-number .unit {
   font-size: var(--font-size-h3);
   font-weight: 400;
-  color: var(--color-primary); /* Jaune */
 }
 
 /* Symbole "%" en jaune */
@@ -279,7 +309,6 @@ header h1 {
 .right-column {
   position: sticky;
   top: 20px;
-  height: fit-content;
 }
 
 .team-container {

@@ -11,7 +11,10 @@
 <body>
     <!-- En-tête avec titre principal -->
     <header>
-        <h1>LE FOOTBALL SUISSE ROMAND PASSÉ AU SCAN</h1>
+        <div class="header-container">
+            <!-- <p class="header-label">AuditCom</p> -->
+            <h1>LE FOOTBALL SUISSE ROMAND PASSÉ AU SCAN</h1>
+        </div>
     </header>
 
     <!-- Contenu principal -->
@@ -20,46 +23,49 @@
         <section class="hero">
             <div class="hero-content">
                 <p class="hero-subtitle">Une analyse comparative fiable des équipes, basée sur des données réelles.</p>
-                <img src="/Image/TerrainSVG.svg" alt="Schéma d'un terrain de football">
+                <div class="hero-visual">
+                    <img src="/Image/TerrainSVG.svg" alt="Schéma d'un terrain de football">
+                </div>
                 <a href="#downloadForm" class="cta-button">VERS LE FORMULAIRE</a>
             </div>
         </section>
 
-      <!-- Conteneur 2 colonnes : Stats à gauche, Clubs à droite -->
-<section class="two-column-layout">
-    
-    <!-- Colonne gauche : Chiffres clés -->
-    <div class="left-column">
-        <!-- Première ligne : 2 cartes noires côte à côte -->
-        <div class="stats-row">
-            <article class="stat-card stat-dark">
-                <p class="stat-number">34<span class="unit">S</span></p>
-                <p class="stat-label">Temps de chargement mobile</p>
-            </article>
-            
-            <article class="stat-card stat-dark">
-                <p class="stat-number">90<span class="percent-yellow">%</span></p>
-                <p class="stat-label">Des visiteurs abandonnent</p>
-            </article>
-        </div>
-        
-        <!-- Deuxième ligne : 1 grande carte violette -->
-        <article class="stat-card stat-purple stat-large">
-            <p class="stat-number">+394 %</p>
-            <p class="stat-label">Croissance d'audience</p>
-        </article>
-    </div>
-    
-    <!-- Colonne droite : Liste des clubs -->
-    <div class="right-column">
-        <div class="team-container">
-            <h2>28 CLUBS</h2>
-            <p class="team-subtitle">Analysé et comparé</p>
-            <div id="teamList"></div>
-        </div>
-    </div>
-    
-</section>
+
+        <!-- Conteneur 2 colonnes : Stats à gauche, Clubs à droite -->
+        <section class="two-column-layout">
+
+            <!-- Colonne gauche : Chiffres clés -->
+            <div class="left-column">
+                <!-- Première ligne : 2 cartes noires côte à côte -->
+                <div class="stats-row">
+                    <article class="stat-card stat-dark">
+                        <p class="stat-number">34<span class="unit">S</span></p>
+                        <p class="stat-label">Temps de chargement mobile</p>
+                    </article>
+
+                    <article class="stat-card stat-dark">
+                        <p class="stat-number">90<span class="percent-yellow">%</span></p>
+                        <p class="stat-label">Des visiteurs abandonnent</p>
+                    </article>
+                </div>
+
+                <!-- Deuxième ligne : 1 grande carte violette -->
+                <article class="stat-card stat-purple stat-large">
+                    <p class="stat-number">+394 %</p>
+                    <p class="stat-label">Croissance d'audience</p>
+                </article>
+            </div>
+
+            <!-- Colonne droite : Liste des clubs -->
+            <div class="right-column">
+                <div class="team-container">
+                    <h2>28 CLUBS</h2>
+                    <p class="team-subtitle">Analysé et comparé</p>
+                    <div id="teamList"></div>
+                </div>
+            </div>
+
+        </section>
         <!-- Section explicative -->
         <section class="insights">
             <div class="insights-icon">
@@ -102,29 +108,30 @@
     <!-- Pied de page -->
     <footer>
         <p>© 2026 AuditCom - Tous droits réservés</p>
-      </footer>
+    </footer>
 
     <!-- Scripts JavaScript (NE PAS MODIFIER) -->
     <script type="module" src="src/main.js"></script>
 
 </body>
+
 </html>
 
 
 
 
-    <!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
-    <!-- <h1 data-bind-global="count"></h1> -->
+<!-- data-bind-global="count" : Affiche le nombre total de rapports (métadonnées globales) -->
+<!-- <h1 data-bind-global="count"></h1> -->
 
-    <!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
-    <!-- <section id="teamList">
+<!-- id="teamList" : Conteneur où seront ajoutés dynamiquement les éléments de l'équipe. Le nom de cet ID ne doit pas être modifié. -->
+<!-- <section id="teamList">
     </section> -->
 
-    <!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
-    <!-- <div id="messageContainer"></div> -->
+<!-- id="messageContainer" : Conteneur pour afficher les messages de succès ou d'erreur. Le nom de cet ID ne doit pas être modifié. -->
+<!-- <div id="messageContainer"></div> -->
 
-    <!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
-    <!-- <form id="downloadForm">
+<!-- id="downloadForm" : Formulaire pour télécharger le PDF. Le nom de cet ID ne doit pas être modifié. -->
+<!-- <form id="downloadForm">
     </form> -->
 
 </body>
