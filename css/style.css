@@ -13,14 +13,14 @@
   /* Couleurs */
   --color-primary: #D2FF00;
   --color-dark: #1a1a1a;
-  --color-purple-light: #FF4501;
-  --color-orange: #6C59D0;
+  --color-purple-pale: #6C59D0;
+  --color-orange: #FF4501;
   --color-white: #ffffff;
   --color-gray-light: #F5F0EC;
   --color-gray-dark: #201E1E;
   
   /* Typographie */
-  --font-primary: 'Montserrat', Arial, sans-serif;
+  --font-primary: 'Neue Montreal', Arial, sans-serif;
   --font-secondary: 'Open Sans', Arial, sans-serif;
   
   --font-size-hero: clamp(2rem, 5vw, 2.5rem);
@@ -171,8 +171,8 @@ header h1 {
 }
 
 .stat-card:nth-child(3) {
-  background-color: var(--color-purple-light);
-  color: var(--color-dark);
+  background-color: var(--color-purple-pale);
+  color: var(--color-white);
 }
 
 .stat-number {
@@ -326,7 +326,7 @@ header h1 {
 }
 
 .insights-icon img {
-  width: 50px;
+  width: 100%;
   filter: invert(1);
 }
 
