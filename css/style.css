@@ -198,109 +198,162 @@ header h1 {
 }
 
 /* ========================================
-   SECTION TEAMS
+   LAYOUT 2 COLONNES
 ======================================== */
 
-.team-section {
-    padding: var(--spacing-lg) var(--spacing-md);
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    text-align: center;
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) var(--spacing-md);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Colonne gauche - Stats */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.stat-card {
+  padding: var(--spacing-lg) var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.stat-dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.stat-purple {
+  background-color: #B8A7E8;
+  color: var(--color-dark);
+}
+
+.stat-number {
+  font-size: var(--font-size-stat);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: var(--font-size-small);
+  opacity: 0.8;
+}
+
+/* Colonne droite - Clubs */
+.right-column {
+  position: sticky;
+  top: 20px;
+}
+
+.team-container {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.team-container h2 {
+  font-size: var(--font-size-h2);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team-subtitle {
+  font-size: var(--font-size-small);
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+/* Menu scrollable des clubs */
+#teamList {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: var(--spacing-xs);
+}
+
+/* Style de la scrollbar */
+#teamList::-webkit-scrollbar {
+  width: 6px;
+}
+
+#teamList::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+#teamList::-webkit-scrollbar-thumb {
+  background: var(--color-gray-dark);
+  border-radius: 3px;
+}
+
+#teamList::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark);
+}
+
+/* Articles des équipes */
+#teamList article {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#teamList article:last-child {
+  margin-bottom: 0;
+}
+
+#teamList article:hover {
+  background-color: #2a2a2a;
+}
+
+#teamList article.active {
+  background-color: var(--color-orange);
+}
+
+/* Logo de l'équipe */
+#teamList img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  background: var(--color-white);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  flex-shrink: 0;
+}
+
+/* Nom de l'équipe */
+#teamList h2 {
+  font-size: var(--font-size-body);
+  font-weight: 600;
+  margin: 0;
+  text-transform: none;
+  text-align: left;
+}
+
+/* Responsive : Passe en 1 colonne sur mobile */
+@media (max-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
   }
   
-  .team-section > h2 {
-    font-size: var(--font-size-h2);
-    font-weight: 700;
-    margin-bottom: var(--spacing-xs);
-    text-transform: uppercase;
+  .right-column {
+    position: static;
   }
-  
-  .team-subtitle {
-    font-size: var(--font-size-small);
-    color: var(--color-gray-dark);
-    margin-bottom: var(--spacing-md);
-  }
-  
-  /* Menu scrollable */
-  #teamList {
-    background: var(--color-white);
-    border: 1px solid #ddd;
-    border-radius: var(--radius-md);
-    max-height: 400px;
-    overflow-y: auto;
-    padding: var(--spacing-sm);
-    text-align: left;
-  }
-  
-  /* Style de la scrollbar */
-  #teamList::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  #teamList::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 4px;
-  }
-  
-  #teamList::-webkit-scrollbar-thumb {
-    background: var(--color-gray-dark);
-    border-radius: 4px;
-  }
-  
-  #teamList::-webkit-scrollbar-thumb:hover {
-    background: var(--color-dark);
-  }
-  
-  /* Articles des équipes */
-  #teamList article {
-    background-color: var(--color-dark);
-    color: var(--color-white);
-    padding: var(--spacing-sm);
-    border-radius: var(--radius-sm);
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-xs);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  #teamList article:last-child {
-    margin-bottom: 0;
-  }
-  
-  #teamList article:hover {
-    background-color: #2a2a2a;
-  }
-  
-  #teamList article.active {
-    background-color: var(--color-orange);
-  }
-  
-  /* Logo de l'équipe */
-  #teamList img {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    background: var(--color-white);
-    border-radius: var(--radius-full);
-    padding: 5px;
-    flex-shrink: 0;
-  }
-  
-  /* Texte de l'équipe */
-  #teamList h2 {
-    font-size: var(--font-size-body);
-    font-weight: 600;
-    margin: 0 0 4px 0;
-    text-transform: none;
-  }
-  
-  #teamList p {
-    font-size: var(--font-size-small);
-    opacity: 0.8;
-    margin: 2px 0;
-  }
+}
 /* ========================================
    SECTION INSIGHTS
 ======================================== */

@@ -25,33 +25,37 @@
             </div>
         </section>
 
-        <!-- Section Chiffres clés -->
-        <section class="stats-grid">
-            <article class="stat-card">
-                <p class="stat-number">34s</p>
-                <p class="stat-label">temps de chargement mobile</p>
-            </article>
-            <article class="stat-card">
-                <p class="stat-number">90%</p>
-                <p class="stat-label">Des visiteurs abandonnent</p>
-            </article>
-            <article class="stat-card">
-                <p class="stat-number">+394%</p>
-                <p class="stat-label">Croissance d'audience</p>
-            </article>
-            <article class="stat-card">
-                <p class="stat-number" data-bind-global="count"></p>
-                <p class="stat-label">Analysés et comparés</p>
-            </article>
-        </section>
-
-        <!-- Section Liste des clubs -->
-        <section class="team-section">
+       <!-- Elise Conteneur 2 colonnes : Stats à gauche, Clubs à droite -->
+<section class="two-column-layout">
+    
+    <!-- Colonne gauche : Chiffres clés -->
+    <div class="left-column">
+        <article class="stat-card stat-dark">
+            <p class="stat-number">34%</p>
+            <p class="stat-label">Temps de chargement mobile</p>
+        </article>
+        
+        <article class="stat-card stat-dark">
+            <p class="stat-number">90%</p>
+            <p class="stat-label">Des visiteurs abandonnent</p>
+        </article>
+        
+        <article class="stat-card stat-purple">
+            <p class="stat-number">+394 %</p>
+            <p class="stat-label">Croissance d'audience</p>
+        </article>
+    </div>
+    
+    <!-- Elise Colonne droite : Liste des clubs -->
+    <div class="right-column">
+        <div class="team-container">
             <h2>28 CLUBS</h2>
-            <p class="team-subtitle">Analysés et comparés</p>
-            <div id="teamList" class="teams-scrollable"></div>
-        </section>
-
+            <p class="team-subtitle">Analysé et comparé</p>
+            <div id="teamList"></div>
+        </div>
+    </div>
+    
+</section>
         <!-- Section explicative -->
         <section class="insights">
             <div class="insights-icon">
