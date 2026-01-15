@@ -328,6 +328,81 @@ header h1 {
   flex: 1;
 }
 
+/* Cartes de statistiques */
+.stat-card {
+  padding: var(--spacing-lg) var(--spacing-md);
+  border-radius: var(--radius-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-dark {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.stat-purple {
+  background-color: rgba(184, 167, 232, 0.5);
+  border: 2px solid rgb(177, 130, 240);
+  color: var(--color-purple-pale);
+  position: relative; /* Important pour positionner l'image */
+  overflow: hidden; /* Pour que l'image ne dépasse pas */
+}
+
+/* Image de fond dans la box violette */
+.stat-purple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background-image: url('/Image/trend-up.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.2; /* Transparence de l'image */
+  z-index: 0;
+  pointer-events: none; /* Pour que l'image n'interfère pas avec les clics */
+}
+
+/* S'assurer que le contenu reste au-dessus de l'image */
+.stat-purple .stat-number,
+.stat-purple .stat-label {
+  position: relative;
+  z-index: 1;
+}
+
+.stat-large {
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.stat-number {
+  font-size: var(--font-size-stat);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Unité "S" en petit et jaune */
+.stat-number .unit {
+  font-size: var(--font-size-h3);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+/* Symbole "%" en jaune */
+.stat-number .percent-yellow {
+  color: var(--color-primary);
+}
+
+.stat-label {
+  font-size: var(--font-size-small);
+  opacity: 0.8;
+}
+
 /* Colonne droite - Clubs */
 .right-column {
   position: sticky;
