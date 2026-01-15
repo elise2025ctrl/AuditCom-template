@@ -202,50 +202,105 @@ header h1 {
 ======================================== */
 
 .team-section {
-  padding: var(--spacing-lg) var(--spacing-md);
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-#teamList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: var(--spacing-sm);
-}
-
-#teamList article {
-  background-color: var(--color-dark);
-  color: var(--color-white);
-  padding: var(--spacing-sm);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-#teamList img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-#teamList h2 {
-  font-size: var(--font-size-small);
-  font-weight: 600;
-}
-
+    padding: var(--spacing-lg) var(--spacing-md);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .team-section > h2 {
+    font-size: var(--font-size-h2);
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    text-transform: uppercase;
+  }
+  
+  .team-subtitle {
+    font-size: var(--font-size-small);
+    color: var(--color-gray-dark);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Menu scrollable */
+  #teamList {
+    background: var(--color-white);
+    border: 1px solid #ddd;
+    border-radius: var(--radius-md);
+    max-height: 400px;
+    overflow-y: auto;
+    padding: var(--spacing-sm);
+    text-align: left;
+  }
+  
+  /* Style de la scrollbar */
+  #teamList::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #teamList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  #teamList::-webkit-scrollbar-thumb {
+    background: var(--color-gray-dark);
+    border-radius: 4px;
+  }
+  
+  #teamList::-webkit-scrollbar-thumb:hover {
+    background: var(--color-dark);
+  }
+  
+  /* Articles des équipes */
+  #teamList article {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  #teamList article:last-child {
+    margin-bottom: 0;
+  }
+  
+  #teamList article:hover {
+    background-color: #2a2a2a;
+  }
+  
+  #teamList article.active {
+    background-color: var(--color-orange);
+  }
+  
+  /* Logo de l'équipe */
+  #teamList img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: var(--color-white);
+    border-radius: var(--radius-full);
+    padding: 5px;
+    flex-shrink: 0;
+  }
+  
+  /* Texte de l'équipe */
+  #teamList h2 {
+    font-size: var(--font-size-body);
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    text-transform: none;
+  }
+  
+  #teamList p {
+    font-size: var(--font-size-small);
+    opacity: 0.8;
+    margin: 2px 0;
+  }
 /* ========================================
    SECTION INSIGHTS
 ======================================== */
