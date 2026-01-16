@@ -679,7 +679,7 @@ header h1 {
   gap: var(--spacing-sm);
   align-items: center;
   margin-top: var(--spacing-xs);
-}
+} 
 
 #downloadForm input[type="checkbox"] {
   width: 20px;
