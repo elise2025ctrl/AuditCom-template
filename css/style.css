@@ -497,6 +497,7 @@ header h2 {
     background: var(--color-dark);
   }
 
+ 
   #teamList article {
     background-color: var(--color-dark);
     color: var(--color-white);
@@ -522,6 +523,7 @@ header h2 {
     background-color: var(--color-orange);
   }
 
+
   #teamList img {
     width: 40px;
     height: 40px;
@@ -531,6 +533,7 @@ header h2 {
     padding: 4px;
     flex-shrink: 0;
   }
+ 
 
   #teamList h2 {
     font-size: var(--font-size-body);
@@ -539,6 +542,39 @@ header h2 {
     text-transform: none;
     text-align: left;
   }
+  @media (max-width: 768px) {
+
+    /* Conteneur de la liste */
+    #teamList {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        -webkit-overflow-scrolling: touch; /* scroll fluide iOS */
+        scroll-snap-type: x mandatory;
+
+        padding-bottom: 10px;
+    }
+
+    /* Chaque club */
+    #teamList > * {
+        flex: 0 0 auto;          /* empêche le retour à la ligne */
+        scroll-snap-align: start;
+        min-width: 140px;        /* ajuste selon ton design */
+    }
+
+    /* Optionnel : cacher la scrollbar */
+    #teamList::-webkit-scrollbar {
+        display: none;
+    }
+
+    #teamList {
+        scrollbar-width: none; /* Firefox */
+    }
+}
 
   @media (max-width: 768px) {
     .two-column-layout {
@@ -553,6 +589,7 @@ header h2 {
       position: static;
     }
   }
+
 
   /* ========================================
    SECTION INSIGHTS
@@ -884,3 +921,83 @@ header h2 {
     text-align: center;
     font-size: var(--font-size-small);
   }
+  /* ==============================
+   FIX OVERFLOW MOBILE GLOBAL
+================================ */
+@media (max-width: 768px) {
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  main,
+  section,
+  .two-column-layout,
+  .left-column,
+  .right-column {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+/* ==============================
+   CLUBS — SCROLL HORIZONTAL MOBILE
+================================ */
+@media (max-width: 768px) {
+
+  #teamList {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 8px 0;
+    margin: 0;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #teamList article {
+    flex: 0 0 64px;
+    height: 64px;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    scroll-snap-align: start;
+  }
+
+  #teamList img {
+    width: 36px;
+    height: 36px;
+  }
+
+  /* masquer les noms */
+  #teamList h2 {
+    display: none;
+  }
+
+  /* scrollbar off */
+  #teamList::-webkit-scrollbar {
+    display: none;
+  }
+  #teamList {
+    scrollbar-width: none;
+  }
+}
