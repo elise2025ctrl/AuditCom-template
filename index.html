@@ -88,15 +88,16 @@
 
 
 
-        <!-- Section Formulaire -->
-        <section class="form-section">
-            <div class="form-container">
-                <!-- Titre à gauche -->
-                <div class="form-header">
-                    <h2>Recevez le rapport d’analyse détaillé</h2>
-                </div>
+       <!-- Section Formulaire -->
+       <section class="form-section">
+        <div class="form-container">
+            <!-- Titre du guide à gauche -->
+            <div class="form-header">
+                <h3>Recevez le rapport d’analyse détaillé.</h3>
+            </div>
 
-                <!-- Formulaire à droite (reste identique) -->
+            <!-- Formulaire à droite -->
+            <div class="form-right">
                 <form id="downloadForm">
                     <div class="form-grid">
                         <div class="form-group">
@@ -114,25 +115,24 @@
                         <fieldset class="form-group checkbox-group">
                             <input type="checkbox" id="newsletterAgreement" name="newsletterAgreement">
                             <label for="newsletterAgreement">J'accepte de recevoir la newsletter</label>
-
                         </fieldset>
                     </div>
+
+                    <button type="submit" class="submit-button">
+                        <span>Télécharger le rapport</span>
+                        <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </button>
                 </form>
             </div>
+        </div>
 
-            <button type="submit" class="submit-button">
-                <span>Télécharger le rapport</span>
-                <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                </svg>
-            </button>
-
-            <!-- Conteneur pour les messages -->
-            <div id="messageContainer"></div>
-        </section>
+        <!-- Conteneur pour les messages -->
+        <div id="messageContainer"></div>
+    </section>
     </main>
 
     <!-- Pied de page -->
