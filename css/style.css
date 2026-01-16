@@ -89,7 +89,6 @@ header {
   display: flex;
   align-items: flex-end;
   container-type: inline-size;
-  /* CRUCIAL pour cqw */
 }
 
 header h1 {
@@ -99,25 +98,14 @@ header h1 {
   color: var(--color-dark);
   padding: var(--spacing-md);
   padding-bottom: 50vh;
-  /* word-spacing: 9999px; */
-  text-align: left;
-  width: 100%;
-}
-
-header h1 {
-  font-size: clamp(3rem, 18cqw, 25rem);
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  color: var(--color-dark);
-  padding: var(--spacing-md);
-  padding-bottom: 50vh;
-  /* word-spacing: 9999px; */
+  word-spacing: 9999px;
   text-align: left;
   width: 100%;
 }
 
 header h2 {
   font-size: var(--font-size-h2);
+  text-align: left;
 }
 
 /* Responsive Header */
@@ -127,12 +115,19 @@ header h2 {
   }
 
   header h1 {
-    font-size: clamp(5rem, 10cqw, 25rem);
+    font-size: clamp(5rem, 14cqw, 25rem);
     padding: var(--spacing-lg);
     padding-bottom: 20vh;
   }
-
+header h2 {
+   
 }
+}
+
+/* ========================================
+   SECTION PARAGRAPHE
+======================================== */
+
 
 /* ========================================
    SECTION HERO
@@ -185,7 +180,7 @@ header h2 {
 }
 
   .hero-subtitle-bold {
-    font-size: x-large;
+    font-size:xx-large;
     color: var(--color-gray-dark);
     line-height: 1.6;
     max-width: 100%;
@@ -256,6 +251,7 @@ header h2 {
       border-radius: var(--radius-lg);
       margin: 0;
     }
+    
 
   }
 
