@@ -94,7 +94,7 @@ header h1 {
 }
 
 /* Responsive Header */
-@media and screen (min-width: 768px) {
+@media screen and (min-width: 768px) {
   header {
     min-height: 70vh;
   }
@@ -679,7 +679,7 @@ header h1 {
   gap: var(--spacing-sm);
   align-items: center;
   margin-top: var(--spacing-xs);
-} 
+}
 
 #downloadForm input[type="checkbox"] {
   width: 20px;
@@ -695,7 +695,7 @@ header h1 {
   user-select: none;
 }
 
-/* Bouton Submit - RECTANGLE ARRONDI */
+/* Bouton Submit - RECTANGLE ARRONDI ET CENTRÉ */
 .submit-button {
   background-color: var(--color-orange);
   color: var(--color-white);
@@ -714,8 +714,12 @@ header h1 {
   overflow: hidden;
   margin-top: var(--spacing-sm);
   min-height: 60px;
+  margin-left: auto; /* Centre le bouton */
+  margin-right: auto; /* Centre le bouton */
+  width: fit-content; /* Le bouton prend juste la largeur de son contenu */
+  padding-left: var(--spacing-xl); /* Plus d'espace à gauche */
+  padding-right: var(--spacing-xl); /* Plus d'espace à droite */
 }
-
 /* Effet de vague au hover */
 .submit-button::before {
   content: '';
