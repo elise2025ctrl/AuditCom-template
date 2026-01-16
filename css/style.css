@@ -74,6 +74,7 @@ header {
   background-color: var(--color-gray-light);
   padding: var(--spacing-md);
   display: flex;
+  flex-direction: col;
   justify-content: center;
   align-items: center;
   min-height: 70vh;
@@ -102,6 +103,22 @@ header h1 {
   width: 100%;
 }
 
+header h1 {
+  font-size: clamp(3rem, 18cqw, 25rem);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--color-dark);
+  padding: var(--spacing-md);
+  padding-bottom: 50vh;
+  word-spacing: 9999px;
+  text-align: left;
+  width: 100%;
+}
+
+header h2 {
+  font-size: var(--font-size-h2) ;
+}
+
 /* Responsive Header */
 @media screen and (min-width: 768px) {
   .header-container {
@@ -109,10 +126,11 @@ header h1 {
   }
   
   header h1 {
-    font-size: clamp(5rem, 14cqw, 25rem);
+    font-size: clamp(5rem, 10cqw, 25rem);
     padding: var(--spacing-lg);
     padding-bottom: 20vh;
   }
+  
 }
 
 /* ========================================
@@ -159,7 +177,8 @@ header h1 {
   color: var(--color-gray-dark);
   line-height: 1.6;
   max-width: 100%;
-  text-align: center;
+  text-align: left;
+  font-weight: 600;
 }
 
 /* Bouton CTA rond */
@@ -276,7 +295,7 @@ header h1 {
   margin-bottom: var(--spacing-xs);
 }
 
-.stat-number .unit {
+.stat-number {
   font-size: var(--font-size-h3);
   font-weight: 800;
   color: var(--color-primary);
