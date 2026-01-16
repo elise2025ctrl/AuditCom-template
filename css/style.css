@@ -374,43 +374,6 @@ header h2 {
     color: var(--color-white);
   }
 
-  .stat-purple {
-    background-color: rgba(184, 167, 232, 0.5);
-    border: 2px solid rgb(177, 130, 240);
-    color: var(--color-purple-pale);
-    position: relative;
-    /* Important pour positionner l'image */
-    overflow: hidden;
-    /* Pour que l'image ne dépasse pas */
-  }
-
-  /* Image de fond dans la box violette */
-  .stat-purple::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    background-image: url('/Image/trend-up.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.2;
-    /* Transparence de l'image */
-    z-index: 0;
-    pointer-events: none;
-    /* Pour que l'image n'interfère pas avec les clics */
-  }
-
-  /* S'assurer que le contenu reste au-dessus de l'image */
-  .stat-purple .stat-number,
-  .stat-purple .stat-label {
-    position: relative;
-    z-index: 1;
-  }
-
   .stat-large {
     padding: var(--spacing-xl) var(--spacing-md);
   }
@@ -632,7 +595,7 @@ header h2 {
     margin: 0;
   }
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .insights {
       grid-template-columns: 1fr 2fr;
       gap: var(--spacing-md);
@@ -818,7 +781,7 @@ header h2 {
   }
 
   /* Desktop Layout */
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     .form-container {
       grid-template-columns: 1fr 1fr;
       gap: var(--spacing-lg);
@@ -833,7 +796,7 @@ header h2 {
   }
 
   /* Mobile : formulaire en 1 colonne */
-  @media (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     .form-grid {
       grid-template-columns: 1fr;
     }
@@ -898,7 +861,7 @@ header h2 {
   /* ==============================
    FIX OVERFLOW MOBILE GLOBAL
 ================================ */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
   html, body {
     max-width: 100%;
