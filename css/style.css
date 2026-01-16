@@ -39,7 +39,7 @@
   --spacing-xl: 6rem;
 
   /* Largeur max */
-  /* --container-max-width: 1200px; */
+  --container-max-width: 1200px;
 
   /* Border radius */
   --radius-sm: 8px;
@@ -76,37 +76,43 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 70vh;
 }
 
 .header-container {
   background-color: var(--color-primary);
   border-radius: var(--radius-lg);
-  max-width: 1200px;
+  max-width: var(--container-max-width);
+  width: 100%;
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: flex-end;
+  container-type: inline-size; /* CRUCIAL pour cqw */
 }
 
 header h1 {
-  font-size: var(--font-size-h1);
+  font-size: clamp(3rem, 18cqw, 25rem);
   text-transform: uppercase;
   letter-spacing: -0.02em;
   color: var(--color-dark);
-  padding: 3rem;
-  padding-bottom: 20vh;
+  padding: var(--spacing-md);
+  padding-bottom: 50vh;
+  word-spacing: 9999px;
+  text-align: left;
+  width: 100%;
 }
 
 /* Responsive Header */
 @media screen and (min-width: 768px) {
-  header {
-    min-height: 70vh;
+  .header-container {
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
-}
-
-.header-container {
-  padding: var(--spacing-xl) var(--spacing-lg);
-}
-
-header h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
-  text-align: left;
+  
+  header h1 {
+    font-size: clamp(5rem, 14cqw, 25rem);
+    padding: var(--spacing-lg);
+    padding-bottom: 20vh;
+  }
 }
 
 /* ========================================
